@@ -13,10 +13,11 @@ end
 
  it { is_expected.to respond_to(:dock).with(1).argument }
 
- it { is_expected.to respond_to :bike}
+ it { is_expected.to respond_to :bikes}
 
   it 'checking' do
-    if @bike == nil
+
+    if docking.bikes.empty?
       expect { docking.release_bike }.to raise_error("There are no bikes in this station")
     end
   end
